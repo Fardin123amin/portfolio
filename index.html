@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fardin_portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .hero {
+            height: 100vh;
+            background-color: black;
+            width: 100%;
+            background-image: url(tobias-van-schneider-lHGeqh3XhRY-unsplash.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: relative;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 45px 8% 0px 8%;
+            /* background-color: black; */
+        }
+
+        .logo {
+            color: white;
+            font-size: 28px;
+            letter-spacing: 1px;
+            cursor: pointer;
+
+        }
+
+        span {
+            color: rgb(255, 15, 123);
+        }
+
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 10px 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: capitalize;
+            font-size: 17px;
+
+        }
+
+        nav ul li a:hover {
+            color: palevioletred;
+            transition: .4s;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: white;
+            border: 2px solid transparent;
+            background-color: rgb(255, 15, 123);
+
+            padding: 10px 15px;
+            border-radius: 20px;
+            transition: transform .4s;
+        }
+
+        .btn:hover {
+            transform: scale(1.2);
+        }
+
+
+
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 8%;
+            transform: translateY(-40%);
+        }
+
+        h1 {
+            color: palevioletred;
+            /* color: white; */
+            text-shadow: 1px 1px 2px rgb(255, 15, 123);
+            margin: 20px 0px 20px;
+            font-size: 75px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        h4 {
+            color: white;
+            text-shadow: 1px 1px 2px black;
+            font-size: 25px;
+            letter-spacing: 2px;
+        }
+
+        h3 {
+            color: azure;
+            margin-bottom: 50px;
+            font-size: 30px;
+        }
+
+        .newslatter form {
+            width: 380px;
+            max-width: 100%;
+            position: relative;
+        }
+
+        .newslatter form input:first-child {
+            display: inline-block;
+            width: 100%;
+            padding: 14px 130px 14px 15px;
+            border: 2px solid rgb(255, 15, 123);
+            border-radius: 30px;
+            outline: none;
+        }
+
+        .newslatter form input:last-child {
+            position: absolute;
+            display: inline-block;
+            outline: none;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 30px;
+            background-color: rgb(255, 15, 123);
+            color: white;
+            box-shadow: 0px 0px 5px white, 0px 0px 7px rgb(255, 15, 123);
+            top: 5.5px;
+            right: 6px;
+            transition: transform .4s;
+
+        }
+
+        .newslatter form input:last-child:hover {
+            transform: scale(0.9);
+
+        }
+
+
+
+
+
+
+        .about {
+            width: 100%;
+            padding: 100px 0px;
+            background-color: gray;
+        }
+
+        .abme {
+            height: auto;
+            width: 300px;
+        }
+
+        .main {
+            width: 1130px;
+            max-width: 100%;
+            margin: 0 auto;
+            /* padding: 5px; */
+            display: flex;
+            align-items: centre;
+            justify-content: space-around;
+
+        }
+
+        .about-text {
+            padding: 30px;
+        }
+
+        .about-text h2 {
+            color: white;
+            font-size: 75px;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+        }
+
+        .about-text h5 {
+            color: white;
+            font-size: 22px;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            text-transform: capitalize;
+            /* transition: .4s; */
+        }
+
+        /* .about-text h5:hover{
+            transform: scale(.9);
+        } */
+
+        .about-text p {
+            color: white;
+            letter-spacing: 1px;
+            line-height: 28px;
+            font-size: 17px;
+            margin-bottom: 45px;
+        }
+
+        button {
+            background-color: rgb(255, 15, 123);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 13px 30px;
+            border: 2px solid transparent;
+            border-radius: 30px;
+            transition: .4s;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: transparent;
+            border: 2px solid rgb(255, 15, 123);
+            cursor: pointer;
+        }
+
+        hr {
+            margin-top: 5px;
+            border: 1px solid rgb(255, 15, 123);
+            transition: .4s;
+        }
+
+        hr:hover {
+            color: rgb(255, 15, 123);
+            transform: scale(1.1);
+
+        }
+
+        
+
+        .service{
+            background-color: black;
+            width: 100%;
+            padding: 100px 0px;
+        }
+        .title h2{
+            color: white;
+            font-size: 75px;
+            width: 1130px;
+            margin: 30px auto;
+            text-align: center;
+        }
+        .box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+        }
+        .card{
+            height: 365px;
+            width: 335px;
+            padding: 20px;
+            background-color: rgb(64, 64, 64);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin: 15px;
+            border-radius: 20px;
+            transition: .2s;
+        }
+        .card:hover{
+            background-color: rgb(28, 28, 28);
+        }
+        div h5{
+            color: white;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .pra p{
+            color: rgb(255, 214, 238);
+            font-size: 16px;
+            line-height: 27px;
+            margin-bottom: 25px;
+        }
+        .button{
+            background-color: rgb(255, 15, 123);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 9px 22px;
+            border: 2px solid transparent;
+            border-radius: 30px;
+            transition: .4s;
+            margin-top: 20px;
+        }
+        .button:hover{
+            background-color: transparent;
+            border: 2px solid rgb(255, 15, 123);
+            cursor: pointer;
+        }
+
+
+
+
+        .contact{
+            width: 100%;
+            height: 290px;
+            background-color: #191919;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .contact p{
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .buttontwo{
+            background-color: rgb(255, 15, 123);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 13px 30px;
+            border: 2px solid transparent;
+            border-radius: 30px;
+            transition: .4s;
+            margin-top: 20px;
+        }
+
+        .buttontwo:hover {
+            background-color: transparent;
+            border: 2px solid rgb(255, 15, 123);
+            cursor: pointer;
+        }
+
+
+
+
+        footer{
+            background-color: #101010;
+            width: 100%;
+            height: 400px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer p:nth-child(1){
+            color: white;
+            font-size: 30px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        footer p:nth-child(2){
+            color: white;
+            font-size: 17px;
+            width: 500px;
+            text-align: center;
+            line-height: 26px;
+        }
+        .social{
+            display: flex;
+        }
+        .social a{
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(255, 15, 123);
+            border-radius: 50%;
+            margin: 22px 10px;
+            text-decoration: none;
+            color: wheat;
+            font-size: 16px;
+            transition: .3s;
+        }
+
+        .social a:hover{
+            transform: scale(1.3);
+        }
+
+        .end{
+            position: absolute;
+            color: rgb(255, 15, 123);
+            font-size: 14px;
+            bottom: 45px;
+        }
+
+       
+
+
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+
+        <nav>
+            <h2 class="logo">Portfo<span>lio</span></h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Bio</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Scope</a></li>
+            </ul>
+
+            <a href="#" class="btn">Subscribe</a>
+        </nav>
+
+        <div class="content">
+            <h4>Hello, my name is </h4>
+            <h1>Md Fardin Amin</h1>
+            <h3>I am a web developer.</h3>
+            <div class="newslatter">
+                <form>
+                    <input type="email" name="email" id="mail" placeholder="Enter your mail">
+                    <input type="submit" name="submit" id="" value="Lets start">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <section class="about">
+        <div class="main">
+            <img class="abme" src="loginform.jpg" alt="loading">
+            <div class="about-text">
+                <h2>About me</h2>
+                <h5>Developer <span>& Designer</span>
+                    <hr>
+                </h5>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, sunt dicta labore quis commodi
+                    suscipit perspiciatis ipsum reprehenderit deleniti natus. Maiores voluptates odio facilis quia
+                    consequatur illum nesciunt officia fuga? Nostrum illo perspiciatis tenetur nihil quisquam culpa
+                    quasi unde quis iste nulla beatae possimus provident consequatur deserunt, quos expedita commodi
+                    ratione quae? Eos quos nulla voluptatem ipsam sit, quidem quod aperiam inventore accusantium sed
+                    commodi vel, possimus molestias doloribus minima placeat quisquam? Itaque nemo non ducimus ipsa
+                    impedit soluta, provident nulla, at, assumenda alias incidunt ratione voluptatum fugit est beatae
+                    repellendus nobis quidem inventore repudiandae maiores voluptatibus atque sequi debitis?</p>
+                <button type="button">Lets talk</button>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="service">
+        <div class="title">
+            <h2>Our Service</h2>
+            <div class="box">
+
+                <div class="card">
+                    <i class="fas fa-bars"></i>
+                    <h5>Web development</h5>
+                    <div class="pra">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, consectetur suscipit.
+                            Iusto est cumque harum expedita optio, animi, eaque laborum facere quas at reprehenderit
+                            veritatis alias veniam odit quaerat quos porro placeat. Eveniet maiores fuga quisquam
+                            sapiente reprehenderit. .</p>
+                            <p style="text-align: center;">
+                                <a class="button" href="#">Read More</a> </p>
+                    </div> 
+                </div> 
+                
+                <div class="card">
+                    <i class="fas fa-bars"></i>
+                    <h5>Web development</h5>
+                    <div class="pra">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, consectetur suscipit.
+                            Iusto est cumque harum expedita optio, animi, eaque laborum facere quas at reprehenderit
+                            veritatis alias veniam odit quaerat quos porro placeat. Eveniet maiores fuga quisquam
+                            sapiente reprehenderit. .</p>
+                            <p style="text-align: center;">
+                                <a class="button" href="#">Read More</a> </p>
+                    </div> 
+                </div> 
+                
+                <div class="card">
+                    <i class="fas fa-bars"></i>
+                    <h5>Web development</h5>
+                    <div class="pra">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, consectetur suscipit.
+                            Iusto est cumque harum expedita optio, animi, eaque laborum facere quas at reprehenderit
+                            veritatis alias veniam odit quaerat quos porro placeat. Eveniet maiores fuga quisquam
+                            sapiente reprehenderit. .</p>
+                            <p style="text-align: center;">
+                                <a class="button" href="#">Read More</a> </p>
+                    </div> 
+                </div>          
+                
+                     
+                    
+
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contact">
+            <p>Let me give you a beautiful website</p>
+            <a href="#" class="buttontwo">Hire me</a>
+        
+    </div>
+
+
+    <footer>
+        <p>Md Fardin Amin</p>
+        <p>For more HTML, CSS and coding tutorial - please click on the link below to subscribe to my channel:</p>
+        <div class="social">
+            <a href="#">FB</a>
+            <a href="#">WA</a>
+            <a href="#">IN</a>
+        </div>
+        <p class="end">
+            Copyright by Md Fardin Amin
+        </p>
+    </footer>
+
+
+</body>
+
+</html>
